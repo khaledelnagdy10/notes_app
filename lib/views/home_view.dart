@@ -13,12 +13,12 @@ class HomeNotesView extends StatelessWidget {
           showModalBottomSheet(
               context: context,
               builder: (context) {
-                return AddNoteBottomSheet();
+                return const AddNoteBottomSheet();
               });
         },
-        child: IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+        child: Icon(Icons.add),
       ),
-      body: NotesViewBody(),
+      body: const NotesViewBody(),
     );
   }
 }
