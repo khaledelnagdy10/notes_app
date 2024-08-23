@@ -4,7 +4,8 @@ import 'package:not/views/home_view.dart';
 
 void main() async {
   await Hive.initFlutter();
-  await Hive.openBox('notes box');
+  var box = await Hive.openBox('notes box');
+  box.put('title', '');
   runApp(const NotesApp());
 }
 
